@@ -32,23 +32,13 @@ func getBoxDimensions(input string) []BoxDimensions {
 
 	var boxDimensions []BoxDimensions
 	for _, line := range lines {
-		dims := strings.Split(line, "x")
-		w, err := strconv.Atoi(dims[0])
+		var boxDimension BoxDimensions
+		_, err := fmt.Scanf(line, "%dx%dx%d", &boxDimension.width, &boxDimension.height, &boxDimension.length)
 		if err != nil {
-			break
+			panic(err)
 		}
 
-		h, err := strconv.Atoi(dims[1])
-		if err != nil {
-			break
-		}
-
-		l, err := strconv.Atoi(dims[2])
-		if err != nil {
-			break
-		}
-
-		boxDimensions = append(boxDimensions, BoxDimensions{width: w, height: h, length: l})
+		boxDimensions = append(boxDimensions, boxDimension)
 	}
 
 	return boxDimensions
