@@ -1,4 +1,4 @@
-package day01
+package main
 
 import (
 	"fmt"
@@ -7,8 +7,8 @@ import (
 	"github.com/justynhunter/aoc2015_go/util"
 )
 
-func Solve() {
-	input := util.ReadFile("./data/day01_input.txt")
+func main() {
+	input := util.ReadFile("./input.txt")
 
 	solution1 := solvePart1(input)
 	fmt.Println("Day 1, Part 1:", solution1)
