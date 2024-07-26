@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/justynhunter/aoc2015_go/lib/utils"
+	"github.com/justynhunter/aoc2015_go/util"
 )
 
 func Solve() {
-	input := utils.ReadFile("./data/day01_input.txt")
+	input := util.ReadFile("./data/day01_input.txt")
 
 	solution1 := solvePart1(input)
 	fmt.Println("Day 1, Part 1:", solution1)
